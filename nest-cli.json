@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/tracker-servoces/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/tracker-servoces/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/tracker-servoces",
+  "projects": {
+    "logging-services": {
+      "type": "application",
+      "root": "apps/logging-services",
+      "entryFile": "main",
+      "sourceRoot": "apps/logging-services/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/logging-services/tsconfig.app.json"
+      }
+    },
+    "tracker-servoces": {
+      "type": "application",
+      "root": "apps/tracker-servoces",
+      "entryFile": "main",
+      "sourceRoot": "apps/tracker-servoces/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/tracker-servoces/tsconfig.app.json"
+      }
+    }
+  }
+}
