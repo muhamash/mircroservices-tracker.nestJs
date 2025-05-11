@@ -1,0 +1,11 @@
+version: '28.1.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGODB_USER_NAME: root
+      MONGODB_USER_PASSWORD: root
+    ports:
+      - 27017:27017

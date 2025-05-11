@@ -3,6 +3,6 @@ import { LoggingServicesModule } from './logging-services.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(LoggingServicesModule);
-  await app.listen(process.env.port ?? 3000);
+  await app.listen(process.env.port ?? 3003);
 }
 bootstrap();
