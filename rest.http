@@ -1,1 +1,11 @@
-GET http://localhost:3003/
+# GET http://localhost:3003/target-coordinates
+
+# post
+POST  http://localhost:3003/target-coordinates
+Content-Type: application/json
+
+{
+    "lat":23432,
+    "lon": 24312,
+    "target": "demo"
+}
