@@ -5,7 +5,7 @@ POST  http://localhost:3003/target-coordinates
 Content-Type: application/json
 
 {
-    "lat":23432,
-    "lon": 24312,
-    "target": "demo"
+    "lat":2342323423442343232,
+    "lon": 234234234,
+    "target": "dasdasdemo"
 }

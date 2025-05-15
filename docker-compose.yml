@@ -1,23 +1,11 @@
-# version: '28.1.1'
+version: '3.8'
 
 services:
   mongo:
     image: mongo
     restart: always
     environment:
-      MONGODB_USER_NAME: root
-      MONGODB_USER_PASSWORD: root
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
     ports:
       - 27017:27017
-
-  logging-service:
-    build:
-      context: .
-      dockerfile: apps/logging-service/Dockerfile
-    container_name: logging-service
-    ports:
-      - 3000:3000
-    environment:
-      - MONGO_URI=mongodb://root:root@mongo:27017/loggingDb?authSource=admin
-    depends_on:
-      - mongo
