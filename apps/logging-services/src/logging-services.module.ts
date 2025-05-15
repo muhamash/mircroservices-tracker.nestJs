@@ -6,11 +6,12 @@ import { TargetCoordinatesModule } from './target-coordinates/target-coordinates
 
 @Module({
   imports: [
-    MongooseModule.forRoot(`mongodb://localhost/27017/loggingDb`),
+    MongooseModule.forRoot('mongodb://localhost:27017/loggingDb'),
     TargetCoordinatesModule,
   ],
   controllers: [LoggingServicesController],
   providers: [LoggingServicesService],
 })
 export class LoggingServicesModule {}
-// `mongodb://localhost/27017/loggingDb`
+
+// MongooseModule.forRoot('mongodb://localhost:27017/loggingDb'),

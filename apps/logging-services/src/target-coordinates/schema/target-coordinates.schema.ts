@@ -4,7 +4,7 @@ import { HydratedDocument } from 'mongoose';
 export type TargetCoordinateDocuments = HydratedDocument<TargetCoordinates>;
 
 @Schema()
-class TargetCoordinates {
+export class TargetCoordinates {
   @Prop({ required: true })
   lat: number;
 
