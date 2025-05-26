@@ -11,6 +11,21 @@ export class TargetCoordinatesService {
     private readonly targetCoordinatesModel: Model<TargetCoordinates>,
   ) {}
 
+  async getTargetCoordinates() {
+    return await this.targetCoordinatesModel.find().exec();
+
+    // if (result.length === 0 || !result) {
+    //   return {
+    //     message: 'No target coordinates found',
+    //   };
+    // } else {
+    //   return {
+    //     message: 'Target coordinates retrieved successfully',
+    //     data: result,
+    //   };
+    // }
+  }
+
   async saveCoordinates(saveCoordinatesDto: SaveCoordinatesDto) {
     return await this.targetCoordinatesModel.create(saveCoordinatesDto);
   }

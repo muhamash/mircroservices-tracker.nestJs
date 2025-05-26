@@ -7,11 +7,20 @@ export class TargetCoordinatesController {
   constructor(private coordinateService: TargetCoordinatesService) {}
 
   @Get()
-  getTargetCoordinates() {
-    return {
-      message: `target coordinates`,
-    };
-  }
+  async getTargetCoordinates() {
+    try {
+      const result = await this.coordinateService.getTargetCoordinates();
+      return {
+        message: 'Target coordinates retrieved successfully',
+        data: result,
+      };
+    } catch (error) {
+      return {
+        message: 'Failed to retrieve target coordinates',
+        error: error.message || error.toString(),
+      };
+    }
+  } 
 
   @Post()
   async saveTargetCoordinates(
