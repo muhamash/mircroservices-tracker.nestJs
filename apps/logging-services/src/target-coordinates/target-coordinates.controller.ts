@@ -20,7 +20,7 @@ export class TargetCoordinatesController {
         error: error.message || error.toString(),
       };
     }
-  } 
+  }
 
   @Post()
   async saveTargetCoordinates(
